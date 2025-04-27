@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+
+# Docker files
+*.tar
+
+# System files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Flask secret keys
+instance/
+
+# Logs
+*.log
