@@ -1,10 +1,12 @@
 #!/bin/bash
 set -e
-echo "🌐 Starting SkyDeploy setup..."
+echo "🚀 SkyDeploy launching services via Docker Compose..."
 
-./scripts/docker_install.sh
+cd "$(dirname "$0")/.."
 
-./scripts/run_containers.sh
-# ./scripts/setup_firewall.sh # Uncomment if needed
+docker-compose down
+docker-compose pull
+docker-compose up -d
 
-echo "🚀 SkyDeploy environment is ready!"
+echo "✅ All containers are up!"
+docker ps
