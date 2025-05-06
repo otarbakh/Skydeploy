@@ -1,4 +1,4 @@
-name: Deploy to EC2
+name: Deploy to EC2 using Docker Compose
 
 on:
   push:
@@ -27,15 +27,32 @@ jobs:
         docker build -t otarbakhtadze/skydeploy:latest .
         docker push otarbakhtadze/skydeploy:latest
 
-    - name: SSH to EC2 and deploy with docker-compose
+    - name: SSH to EC2 and deploy with Docker Compose
       uses: appleboy/ssh-action@v0.1.5
       with:
         host: ${{ secrets.EC2_HOST }}
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          # Install docker-compose plugin if missing
+          if ! command -v docker compose &> /dev/null
+          then
+            sudo apt update
+            sudo apt install docker-compose-plugin -y
+          fi
+
+          # Clone repo if missing
+          if [ ! -d "Skydeploy" ]; then
+            git clone https://github.com/otarbakh/Skydeploy.git
+          fi
+
           cd Skydeploy
+          git reset --hard
           git pull origin main
-          docker compose pull
+
+          # Stop and remove any running containers
           docker compose down
+
+          # Run new version
+          docker compose pull
           docker compose up -d --build
