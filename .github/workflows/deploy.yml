@@ -3,7 +3,7 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main  # or use "master" if your branch is named that
+      - main
 
 jobs:
   deploy:
@@ -27,14 +27,15 @@ jobs:
         docker build -t otarbakhtadze/skydeploy:latest .
         docker push otarbakhtadze/skydeploy:latest
 
-    - name: SSH to EC2 and deploy
+    - name: SSH to EC2 and deploy with docker-compose
       uses: appleboy/ssh-action@v0.1.5
       with:
         host: ${{ secrets.EC2_HOST }}
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          docker pull otarbakhtadze/skydeploy:latest
-          docker stop skydeploy || true
-          docker rm skydeploy || true
-          docker run -d -p 5000:5000 --name skydeploy otarbakhtadze/skydeploy:latest
+          cd Skydeploy
+          git pull origin main
+          docker compose pull
+          docker compose down
+          docker compose up -d --build
