@@ -21,3 +21,9 @@ instance/
 # Logs
 *.log
 .terraform/
+
+# Ignore Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+
