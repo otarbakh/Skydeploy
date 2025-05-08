@@ -50,3 +50,18 @@ jobs:
       - name: Terraform Apply (Auto-Approve on Push to Main)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
+
+      - name: Send Email Notification
+        if: success() && github.ref == 'refs/heads/main'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Terraform Apply Success
+          to: ${{ secrets.EMAIL_RECIPIENT }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            ✅ Terraform apply was successful on branch: ${{ github.ref_name }}
+            Commit: ${{ github.event.head_commit.message }}
