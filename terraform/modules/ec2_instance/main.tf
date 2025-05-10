@@ -82,7 +82,7 @@ resource "aws_security_group" "skydeploy_sg" {
 # EC2 Key Pair (Use existing or generate a new one)
 resource "aws_key_pair" "skydeploy_key" {
   key_name   = "skydeploy-key-new"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = var.public_key
 }
 
 # EC2 Instance Configuration

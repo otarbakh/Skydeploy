@@ -13,4 +13,5 @@ module "ec2_instance" {
   aws_region        = var.aws_region
   instance_type     = var.instance_type
   availability_zone = var.availability_zone
+  public_key  = var.public_key
 }

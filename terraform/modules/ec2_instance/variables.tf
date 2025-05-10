@@ -14,3 +14,8 @@ variable "availability_zone" {
   type        = string
 }
 
+variable "public_key" {
+  description = "Public SSH key"
+  type        = string
+}
+

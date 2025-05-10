@@ -15,3 +15,7 @@ variable "availability_zone" {
   default     = "us-east-1a" # You can set the default zone or override it during plan/apply
 }
 
+variable "public_key" {
+  description = "Public key for SSH access"
+  type        = string
+}
