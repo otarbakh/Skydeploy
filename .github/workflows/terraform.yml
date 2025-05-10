@@ -45,7 +45,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan -var-file="terraform.tfvars"
 
       - name: Terraform Apply (Auto-Approve on Push to Main)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

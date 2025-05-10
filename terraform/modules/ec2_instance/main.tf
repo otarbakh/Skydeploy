@@ -15,7 +15,7 @@ resource "aws_vpc" "skydeploy_vpc" {
 resource "aws_subnet" "skydeploy_subnet" {
   vpc_id            = aws_vpc.skydeploy_vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = var.availability_zone  # Optionally use a variable
+  availability_zone = var.availability_zone # Optionally use a variable
 
   tags = {
     Name = "skydeploy-subnet"
@@ -61,14 +61,14 @@ resource "aws_security_group" "skydeploy_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # You can restrict this to your IP for security
+    cidr_blocks = ["0.0.0.0/0"] # You can restrict this to your IP for security
   }
 
   ingress {
     from_port   = 5000
     to_port     = 5000
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # You can restrict this to your IP for security
+    cidr_blocks = ["0.0.0.0/0"] # You can restrict this to your IP for security
   }
 
   egress {
@@ -87,7 +87,7 @@ resource "aws_key_pair" "skydeploy_key" {
 
 # EC2 Instance Configuration
 resource "aws_instance" "skydeploy_instance" {
-  ami                         = "ami-053b0d53c279acc90"  # Ubuntu 22.04 in us-east-1
+  ami                         = "ami-053b0d53c279acc90" # Ubuntu 22.04 in us-east-1
   instance_type               = var.instance_type
   subnet_id                   = aws_subnet.skydeploy_subnet.id
   vpc_security_group_ids      = [aws_security_group.skydeploy_sg.id]
