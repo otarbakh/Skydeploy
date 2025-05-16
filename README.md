@@ -47,16 +47,12 @@ Docker & Docker Compose installed on EC2
 
 Git installed
 
-
 🚀 Quick Start
-Option 1: Clone & Run
-bash
-Copy
-Edit
 # SSH into your EC2 instance
 ssh ubuntu@your-ec2-ip
 
 # Clone the repo
+```bash
 git clone https://github.com/otarbakh/Skydeploy.git
 cd Skydeploy
 
