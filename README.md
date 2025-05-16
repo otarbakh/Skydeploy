@@ -54,7 +54,7 @@ ssh ubuntu@your-ec2-ip
 # Clone the repo
 ```bash
 git clone https://github.com/otarbakh/Skydeploy.git
-cd Skydeploy
+cd Skydeploy```
 
 # Run containers (manually or with script)
 bash scripts/start.sh
