@@ -34,6 +34,10 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 
 
 
+
+
+
+
 ⚙️ Prerequisites
 AWS Account (to launch EC2)
 
