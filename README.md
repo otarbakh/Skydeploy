@@ -2,6 +2,7 @@
 
 Skydeploy is a cloud-native DevOps monitoring and deployment project built using Docker, Prometheus, Grafana, and Flask. It showcases a production-style setup ideal for monitoring infrastructure metrics while running a Python-based application on an EC2 instance.
 
+
 ![Deployment](https://img.shields.io/badge/deployment-EC2-blue)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 ![Grafana](https://img.shields.io/badge/monitoring-Grafana%2FPrometheus-green)
@@ -13,7 +14,7 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 ![Bash](https://img.shields.io/badge/script-Bash-black)
 ![Python](https://img.shields.io/badge/language-Python-blue)
 ![Linux](https://img.shields.io/badge/OS-Ubuntu-orange)
-
+![CI/CD](https://img.shields.io/badge/GitHub-CI%2FCD-black?logo=github)
 ---
 
 ## 📌 Features
