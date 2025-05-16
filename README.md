@@ -6,6 +6,10 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 ![Grafana](https://img.shields.io/badge/monitoring-Grafana%2FPrometheus-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Terraform](https://img.shields.io/badge/IaC-Terraform-purple)
+![Docker Hub](https://img.shields.io/badge/image-Docker_Hub-blue)
+![AWS EC2](https://img.shields.io/badge/AWS-EC2-orange)
+![AWS S3](https://img.shields.io/badge/AWS-S3-yellow)
 
 ---
 
