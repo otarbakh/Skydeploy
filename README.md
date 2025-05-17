@@ -63,9 +63,12 @@ docker run -d -p 5000:5000 otarbakhtadze/skydeploy:latest
 
 ## 📊 Access Services
 Service	URL
-Flask App	http://<EC2-IP>:5000
-Prometheus	http://<EC2-IP>:9090
-Grafana	http://<EC2-IP>:3000
+Flask App 
+```http://<EC2-IP>:5000```
+Prometheus	
+```http://<EC2-IP>:9090```
+Grafana	
+```http://<EC2-IP>:3000```
 
 ## 🔐 Default Grafana Credentials
 Username: admin
