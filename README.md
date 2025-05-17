@@ -72,6 +72,7 @@ Grafana
 
 ## 🔐 Default Grafana Credentials
 Username: admin
+
 Password: admin
 
 ## 📈 Grafana Dashboards
