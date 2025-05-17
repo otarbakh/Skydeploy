@@ -42,31 +42,26 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 
 
 ## 🚀 Quick Start
-
-### SSH into your EC2 instance
-
-```bash
 ssh ubuntu@your-ec2-ip
 
 git clone https://github.com/otarbakh/Skydeploy.git
 cd Skydeploy
 
 bash scripts/start.sh
-🐳 Option 2: Use Docker Image Only (Flask App)
-bash
-Copy
-Edit
+## 🐳 Run via Docker
 docker pull otarbakhtadze/skydeploy:latest
 docker run -d -p 5000:5000 otarbakhtadze/skydeploy:latest
-📊 Access Services
+
+## 🔗 Access Services
 Service	URL
 Flask App	http://<EC2-IP>:5000
 Prometheus	http://<EC2-IP>:9090
 Grafana	http://<EC2-IP>:3000
 
-🔐 Default Grafana Login
+## 🔐 Default Grafana Credentials
 Username: admin
-
 Password: admin
+
+
 
 
