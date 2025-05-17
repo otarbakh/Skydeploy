@@ -44,15 +44,24 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 ## 🚀 Quick Start
 ssh ubuntu@your-ec2-ip
 
-git clone https://github.com/otarbakh/Skydeploy.git
-cd Skydeploy
+git clone
+```
+https://github.com/otarbakh/Skydeploy.git
+```  
+cd Skydeploy  
 
 bash scripts/start.sh
-## 🐳 Run via Docker
-docker pull otarbakhtadze/skydeploy:latest
-docker run -d -p 5000:5000 otarbakhtadze/skydeploy:latest
 
-## 🔗 Access Services
+## 🐳 Run via Docker
+
+```bash
+docker pull otarbakhtadze/skydeploy:latest  
+docker run -d -p 5000:5000 otarbakhtadze/skydeploy:latest
+```
+
+
+
+## 📊 Access Services
 Service	URL
 Flask App	http://<EC2-IP>:5000
 Prometheus	http://<EC2-IP>:9090
