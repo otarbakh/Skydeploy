@@ -50,7 +50,7 @@ https://github.com/otarbakh/Skydeploy.git
 ```  
 cd Skydeploy  
 
-bash scripts/start.sh
+bash scripts/main.sh
 
 ## 🐳 Run via Docker
 
