@@ -1,4 +1,4 @@
-# Skydeploy 🚀
+# Skydeploy 
 
 Skydeploy is a cloud-native DevOps monitoring and deployment project built using Docker, Prometheus, Grafana, and Flask. It showcases a production-style setup ideal for monitoring infrastructure metrics while running a Python-based application on an EC2 instance.
 
@@ -17,7 +17,7 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 ![CI/CD](https://img.shields.io/badge/GitHub-CI%2FCD-black?logo=github)
 ---
 
-## 📌 Features
+##  Features
 
 - Python Flask app with Docker  
 - Monitoring with Prometheus + Node Exporter  
@@ -33,7 +33,7 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 - Flask app is served via Docker container (port 5000)  
 
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 - AWS Account (to launch EC2)  
 - Ubuntu EC2 instance (`t2.micro` recommended)  
@@ -41,7 +41,7 @@ Skydeploy is a cloud-native DevOps monitoring and deployment project built using
 - Git installed  
 
 
-## 🚀 Quick Start
+##  Quick Start
 ssh ubuntu@your-ec2-ip
 
 git clone
@@ -52,7 +52,7 @@ cd Skydeploy
 
 bash scripts/main.sh
 
-## 🐳 Run via Docker
+## Run via Docker
 
 ```bash
 docker pull otarbakhtadze/skydeploy:latest  
@@ -61,7 +61,7 @@ docker run -d -p 5000:5000 otarbakhtadze/skydeploy:latest
 
 
 
-## 📊 Access Services
+##  Access Services
 Service	URL
 Flask App 
 ```http://<EC2-IP>:5000```
@@ -70,12 +70,12 @@ Prometheus
 Grafana	
 ```http://<EC2-IP>:3000```
 
-## 🔐 Default Grafana Credentials
+##  Default Grafana Credentials
 Username: admin
 
 Password: admin
 
-## 📈 Grafana Dashboards
+##  Grafana Dashboards
 ![Screenshot from 2025-05-15 21-10-48](https://github.com/user-attachments/assets/2c6ec7e4-0d25-4698-93c9-4078cf97f666)
 
 
